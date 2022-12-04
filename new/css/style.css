@@ -9,7 +9,7 @@ img {
 
 .welcome_animation {
   min-width: 375px;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   position: fixed;
   top: 0;
