@@ -17,8 +17,8 @@ img {
 
 .welcome_animation {
   min-width: 375px;
-  height: 100svh;
-  width: 100svw;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
