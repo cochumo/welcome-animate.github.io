@@ -8,6 +8,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+#container.no-scroll {
+  overflow: hidden;
+}
+
 img {
   display: block;
 }
