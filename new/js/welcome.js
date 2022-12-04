@@ -10,7 +10,6 @@ const isPcSize = (windowWidth > breakPointB);
 
 document.addEventListener('DOMContentLoaded', () => {
 	document.body.classList.add('no-scroll');
-	document.getElementById('container').classList.add('no-scroll');
 
   //Wrapper animation
 	anime.timeline({
@@ -27,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		duration: 1000,
 	 	complete: function(anime) {
 			// document.querySelector('.welcome_animation').remove();
-			document.body.classList.remove('no-scroll');
-			document.getElementById('container').classList.remove('no-scroll');
 		}
 	})
 
