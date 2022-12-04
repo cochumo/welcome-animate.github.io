@@ -5,10 +5,9 @@ body {
 }
 
 body.no-scroll {
-  overflow: hidden;
-}
-
-#container.no-scroll {
+  position: fixed;
+  left: 0;
+  right: 0;
   overflow: hidden;
 }
 
