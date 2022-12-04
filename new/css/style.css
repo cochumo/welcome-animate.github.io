@@ -17,8 +17,8 @@ img {
 
 .welcome_animation {
   min-width: 375px;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100svw;
   position: absolute;
   background: #EEE;
   color: #FFF;
@@ -118,7 +118,7 @@ img {
 
 .philosphy-wrappe-contents img {
   height: 17vw;
-  width: fit-content;
+  width: auto;
 }
 
 @media screen and (min-width: 500px) and ( max-width: 768px) {
@@ -217,7 +217,7 @@ img {
 
   .philosphy-wrappe-contents img {
     height: auto;
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -286,7 +286,7 @@ img {
   }
 
   .philosphy-wrappe-title img {
-    width: fit-content;
+    width: auto;
   }
 
   .philosphy-wrappe-contents {
@@ -296,7 +296,7 @@ img {
 
   .philosphy-wrappe-contents img {
     height: auto;
-    width: 50%;
+    width: 100%;
   }
 }
 
