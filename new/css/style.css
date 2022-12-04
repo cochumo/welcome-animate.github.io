@@ -96,10 +96,10 @@ img {
 }
 
 .mv-todaka-wrapper .mv-todaka-mobile-image {
-  width: 150%;
+  width: 100%;
   object-fit: cover;
   position: absolute;
-  bottom: -30vh;
+  bottom: 0;
 }
 
 .philosphy-wrapper {
@@ -128,9 +128,9 @@ img {
 
 @media screen and (min-width: 500px) and ( max-width: 768px) {
   .mv-todaka-wrapper .mv-todaka-mobile-image {
-    width: 120%;
-    position: initial;
-    bottom: initial;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
   .philosphy-wrappe-title img {
