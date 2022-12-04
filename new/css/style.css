@@ -96,15 +96,15 @@ img {
 }
 
 .mv-todaka-wrapper .mv-todaka-mobile-image {
-  width: 115%;
+  width: 150%;
   object-fit: cover;
   position: absolute;
-  bottom: 0;
+  bottom: -30vh;
 }
 
 .philosphy-wrapper {
   left: 0;
-  bottom: 12%;
+  bottom: 5%;
   padding: 0 2%;
   width: calc(100vw - 4%);
 }
