@@ -9,6 +9,8 @@ const isTabletSize = (windowWidth <= breakPointB) && (windowWidth > breakPointA)
 const isPcSize = (windowWidth > breakPointB);
 
 document.addEventListener('DOMContentLoaded', () => {
+	document.body.classList.add('no-scroll');
+
   //Wrapper animation
 	anime.timeline({
 		targets: ".welcome_animation",
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		duration: 1000,
 	 	complete: function(anime) {
 			// document.querySelector('.welcome_animation').remove();
+			document.body.classList.remove('no-scroll');
 		}
 	})
 
