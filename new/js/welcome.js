@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		opacity: 0,
 		duration: 1000,
 	 	complete: function(anime) {
+			document.body.classList.remove('no-scroll');
 			document.querySelector('.welcome_animation').remove();
 		}
 	})
