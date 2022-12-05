@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		opacity: 0,
 		duration: 1000,
 	 	complete: function(anime) {
-			// document.querySelector('.welcome_animation').remove();
+			document.querySelector('.welcome_animation').remove();
 		}
 	})
 
