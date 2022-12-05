@@ -8,6 +8,8 @@ const isMobileSize = (windowWidth < breakPointA);
 const isTabletSize = (windowWidth <= breakPointB) && (windowWidth > breakPointA);
 const isPcSize = (windowWidth > breakPointB);
 
+const xMax = 16
+
 document.addEventListener('DOMContentLoaded', () => {
 	document.body.classList.add('no-scroll');
 
@@ -55,8 +57,55 @@ document.addEventListener('DOMContentLoaded', () => {
 		delay: 400,
 		opacity: 1,
 		// bottom: ["-30%", "0"],
-		scale: ["2", "1"],
-		duration: 1000,
+		// scale: ["2", "1"],
+		perspective: '100px',
+		translateZ: ["100px", "0px"],
+		duration: 500,
+	})
+
+	anime.timeline({
+		targets: ".mv-todaka-image",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 500,
+		translateX: [
+			{
+				value: xMax * -2,
+			},
+			{
+				value: xMax * 2,
+			},
+			{
+				value: xMax * -1,
+			},
+			{
+				value: xMax,
+			},
+			{
+				value: xMax / -2,
+			},
+			{
+				value: xMax / 2,
+			},
+			{
+				value: xMax / -3,
+			},
+			{
+				value: xMax / 3,
+			},
+			{
+				value: xMax / -4,
+			},
+			{
+				value: xMax / 4,
+			},
+			{
+				value: 0
+			}
+		],
+		easing: 'easeInOutSine',
+		duration: 400,
 	})
 
   // phrase animation

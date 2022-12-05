@@ -91,7 +91,7 @@ img {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 .mv-todaka-wrapper .mv-todaka-desktop-image {
