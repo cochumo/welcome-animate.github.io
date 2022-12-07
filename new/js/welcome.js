@@ -1,13 +1,3 @@
-import { responsiveObject } from './utils.js'
-
-const breakPointA = 768;
-const breakPointB = 1366;
-const windowWidth = window.innerWidth;
-
-const isMobileSize = (windowWidth < breakPointA);
-const isTabletSize = (windowWidth <= breakPointB) && (windowWidth > breakPointA);
-const isPcSize = (windowWidth > breakPointB);
-
 const xMax = 16
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,23 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.body.classList.remove('no-scroll');
 			document.querySelector('.welcome_animation').remove();
 		}
-	})
-
-  // background line animation
-	anime.timeline({
-		targets: ".background-line-wrapper",
-		easing: "easeOutExpo",
-	})
-	.add({
-		delay: 400,
-		opacity: 1,
-		duration: 1000,
-    ...responsiveObject(isMobileSize, {
-      bottom: ["-20%", "0"],
-    }),
-    ...responsiveObject((isPcSize || isTabletSize), {
-      translateY: ["-30%", "-50%"],
-    })
 	})
 
   // mv-todaka animation
