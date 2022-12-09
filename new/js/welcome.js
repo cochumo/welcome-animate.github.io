@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	.add({
 		delay: 400,
 		opacity: 1,
-		// bottom: ["-30%", "0"],
-		// scale: ["2", "1"],
 		perspective: '100px',
 		translateZ: ["100px", "0px"],
 		duration: 500,
@@ -117,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	/**
 	 * screen2
 	 */
-  // mv-todaka animation
+  // mv-nakajima animation
 	anime.timeline({
 		targets: "#screen2 .mv-nakajima-wrapper",
 		easing: "easeOutExpo",
@@ -125,8 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	.add({
 		delay: 3400,
 		opacity: 1,
-		// bottom: ["-30%", "0"],
-		// scale: ["2", "1"],
 		perspective: '100px',
 		translateZ: ["100px", "0px"],
 		duration: 500,
@@ -192,6 +188,91 @@ document.addEventListener('DOMContentLoaded', () => {
   // philosphy animation
 	anime.timeline({
 		targets: "#screen2 .philosphy-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 4200,
+		opacity: 1,
+		right: ["30%", "0"],
+		duration: 1000,
+	})
+
+	/**
+	 * screen3
+	 */
+  // mv-todaka animation
+	anime.timeline({
+		targets: "#screen3 .mv-nakajima-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 3400,
+		opacity: 1,
+		perspective: '100px',
+		translateZ: ["100px", "0px"],
+		duration: 500,
+	})
+
+	anime.timeline({
+		targets: "#screen3 .mv-nakajima-image",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 3500,
+		translateX: [
+			{
+				value: xMax * -2,
+			},
+			{
+				value: xMax * 2,
+			},
+			{
+				value: xMax * -1,
+			},
+			{
+				value: xMax,
+			},
+			{
+				value: xMax / -2,
+			},
+			{
+				value: xMax / 2,
+			},
+			{
+				value: xMax / -3,
+			},
+			{
+				value: xMax / 3,
+			},
+			{
+				value: xMax / -4,
+			},
+			{
+				value: xMax / 4,
+			},
+			{
+				value: 0
+			}
+		],
+		easing: 'easeInOutSine',
+		duration: 400,
+	})
+
+  // phrase animation
+	anime.timeline({
+		targets: "#screen3 .phrase-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 3800,
+		opacity: 1,
+		right: ["-50%", "-20%"],
+		duration: 1000,
+	})
+
+  // philosphy animation
+	anime.timeline({
+		targets: "#screen3 .philosphy-wrapper",
 		easing: "easeOutExpo",
 	})
 	.add({

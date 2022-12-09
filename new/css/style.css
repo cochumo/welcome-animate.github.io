@@ -176,10 +176,9 @@ img {
   .mv-nakajima-wrapper .mv-nakajima-desktop-image {
     display: block;
     object-fit: cover;
-    width: 150vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
-    left: -10%;
   }
 
   .background-wrapper {
@@ -234,6 +233,11 @@ img {
 }
 
 @media screen and (min-width: 1366px) {
+  #screen2 .background-wrapper {
+    /* TODO: フルパスに変更する */
+    background-image: url(../images/screen2/background.png);
+  }
+  
   .mv-todaka-wrapper .mv-todaka-mobile-image,
   .mv-nakajima-wrapper .mv-nakajima-mobile-image {
     display: none;
