@@ -67,7 +67,7 @@ img {
 
 #screen3 .background-wrapper {
   /* TODO: フルパスに変更する */
-  background-image: url(../images/screen3/background.png);
+  background-image: url(../images/screen3/background-sp.png);
 }
 
 .phrase-wrapper {
@@ -75,6 +75,11 @@ img {
   left: 0;
   padding: 0 2%;
   width: calc(100vw - 4%);
+}
+
+#screen2 .phrase-wrapper {
+  right: 0;
+  left: auto;
 }
 
 /* TODO: 変更なかったら消す */
@@ -87,7 +92,8 @@ img {
 }
 
 .mv-todaka-wrapper,
-.mv-nakajima-wrapper {
+.mv-nakajima-wrapper,
+.mv-katsuno-wrapper {
   left: 0;
   bottom: 0;
   width: 100vw;
@@ -95,12 +101,14 @@ img {
 }
 
 .mv-todaka-wrapper .mv-todaka-desktop-image,
-.mv-nakajima-wrapper .mv-nakajima-desktop-image {
+.mv-nakajima-wrapper .mv-nakajima-desktop-image,
+.mv-katsuno-wrapper .mv-katsuno-desktop-image {
   display: none;
 }
 
 .mv-todaka-wrapper .mv-todaka-mobile-image,
-.mv-nakajima-wrapper .mv-nakajima-mobile-image {
+.mv-nakajima-wrapper .mv-nakajima-mobile-image,
+.mv-katsuno-wrapper .mv-katsuno-mobile-image {
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -141,7 +149,8 @@ img {
 
 @media screen and (min-width: 500px) and ( max-width: 768px) {
   .mv-todaka-wrapper .mv-todaka-mobile-image,
-  .mv-nakajima-wrapper .mv-nakajima-mobile-image {
+  .mv-nakajima-wrapper .mv-nakajima-mobile-image,
+  .mv-katsuno-wrapper .mv-katsuno-mobile-image {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -167,13 +176,20 @@ img {
     background-image: url(../images/screen2/background.png);
   }
 
+  #screen3 .background-wrapper {
+    /* TODO: フルパスに変更する */
+    background-image: url(../images/screen3/background.png);
+  }
+
   .mv-todaka-wrapper .mv-todaka-mobile-image,
-  .mv-nakajima-wrapper .mv-nakajima-mobile-image {
+  .mv-nakajima-wrapper .mv-nakajima-mobile-image,
+  .mv-katsuno-wrapper .mv-katsuno-mobile-image {
     display: none;
   }
 
   .mv-todaka-wrapper .mv-todaka-desktop-image,
-  .mv-nakajima-wrapper .mv-nakajima-desktop-image {
+  .mv-nakajima-wrapper .mv-nakajima-desktop-image,
+  .mv-katsuno-wrapper .mv-katsuno-desktop-image {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -204,7 +220,8 @@ img {
   }
 
   .mv-todaka-wrapper,
-  .mv-nakajima-wrapper {
+  .mv-nakajima-wrapper,
+  .mv-katsuno-wrapper {
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -238,13 +255,20 @@ img {
     background-image: url(../images/screen2/background.png);
   }
   
+  #screen3 .background-wrapper {
+    /* TODO: フルパスに変更する */
+    background-image: url(../images/screen3/background.png);
+  }
+
   .mv-todaka-wrapper .mv-todaka-mobile-image,
-  .mv-nakajima-wrapper .mv-nakajima-mobile-image {
+  .mv-nakajima-wrapper .mv-nakajima-mobile-image,
+  .mv-katsuno-wrapper .mv-katsuno-mobile-image {
     display: none;
   }
 
   .mv-todaka-wrapper .mv-todaka-desktop-image,
-  .mv-nakajima-wrapper .mv-nakajima-desktop-image {
+  .mv-nakajima-wrapper .mv-nakajima-desktop-image,
+  .mv-katsuno-wrapper .mv-katsuno-desktop-image {
     display: block;
     object-fit: cover;
   }
@@ -267,12 +291,17 @@ img {
     left: auto;
   }
 
+  #screen3 .phrase-wrapper {
+    left: -20%;
+  }
+
   #screen1 .phrase-wrapper img {
     height: 100%;
     padding: 0 8rem;
   }
 
-  #screen2 .phrase-wrapper img {
+  #screen2 .phrase-wrapper img,
+  #screen3 .phrase-wrapper img {
     height: auto;
     width: auto;
   }
@@ -282,7 +311,8 @@ img {
   }
 
   .mv-todaka-wrapper,
-  .mv-nakajima-wrapper {
+  .mv-nakajima-wrapper,
+  .mv-katsuno-wrapper {
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -290,14 +320,25 @@ img {
   }
 
   .mv-todaka-wrapper img,
-  .mv-nakajima-wrapper img {
+  .mv-nakajima-wrapper img,
+  .mv-katsuno-wrapper img {
     height: 100%;
   }
 
   .philosphy-wrapper {
     max-height: 210px;
+    bottom: 2%;
+  }
+
+  #screen1 .philosphy-wrapper,
+  #screen2 .philosphy-wrapper {
     padding: 0 13%;
     width: calc(100vw - 26%);
+  }
+
+  #screen3 .philosphy-wrapper {
+    padding: 0 7.5%;
+    width: calc(100vw - 15%);
   }
 
   .philosphy-wrappe-title img {

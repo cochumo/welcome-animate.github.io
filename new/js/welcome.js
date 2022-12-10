@@ -1,3 +1,13 @@
+import { responsiveObject } from './utils.js'
+
+const breakPointA = 768;
+const breakPointB = 1366;
+const windowWidth = window.innerWidth;
+
+const isMobileSize = (windowWidth < breakPointA);
+const isTabletSize = (windowWidth <= breakPointB) && (windowWidth > breakPointA);
+const isPcSize = (windowWidth > breakPointB);
+
 const xMax = 16
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -181,7 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	.add({
 		delay: 3800,
 		opacity: 1,
-		right: ["-50%", "-20%"],
+		...responsiveObject(isMobileSize, {
+      right: ["-30%", "0"],
+    }),
+		...responsiveObject((isPcSize || isTabletSize), {
+      right: ["-50%", "-20%"],
+    }),
 		duration: 1000,
 	})
 
@@ -196,17 +211,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		right: ["30%", "0"],
 		duration: 1000,
 	})
+	.add({
+		complete: function(anime) {
+			document.querySelector('#screen2').remove();
+		}
+	})
 
 	/**
 	 * screen3
 	 */
-  // mv-todaka animation
+  // mv-katsuno animation
 	anime.timeline({
-		targets: "#screen3 .mv-nakajima-wrapper",
+		targets: "#screen3 .mv-katsuno-wrapper",
 		easing: "easeOutExpo",
 	})
 	.add({
-		delay: 3400,
+		delay: 6400,
 		opacity: 1,
 		perspective: '100px',
 		translateZ: ["100px", "0px"],
@@ -214,11 +234,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	anime.timeline({
-		targets: "#screen3 .mv-nakajima-image",
+		targets: "#screen3 .mv-katsuno-image",
 		easing: "easeOutExpo",
 	})
 	.add({
-		delay: 3500,
+		delay: 6500,
 		translateX: [
 			{
 				value: xMax * -2,
@@ -264,9 +284,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		easing: "easeOutExpo",
 	})
 	.add({
-		delay: 3800,
+		delay: 6800,
 		opacity: 1,
-		right: ["-50%", "-20%"],
+		...responsiveObject(isMobileSize, {
+      left: ["-30%", "0"],
+    }),
+		...responsiveObject((isPcSize || isTabletSize), {
+      left: ["-50%", "-20%"],
+    }),
 		duration: 1000,
 	})
 
@@ -276,9 +301,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		easing: "easeOutExpo",
 	})
 	.add({
-		delay: 4200,
+		delay: 7200,
 		opacity: 1,
-		right: ["30%", "0"],
+		left: ["30%", "0"],
 		duration: 1000,
 	})
 })
