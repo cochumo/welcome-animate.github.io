@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
       left: ["0%", "-450%"],
     }),
 		...responsiveObject((isPcSize || isTabletSize), {
-      left: ["-50%", "-20%"],
+      left: ["0%", "-100%"],
     }),
 		duration: 40000,
 	})
