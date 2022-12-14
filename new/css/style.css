@@ -87,13 +87,17 @@ img {
   left: auto;
 }
 
+#screen4 .phrase-wrapper {
+  opacity: 1;
+}
+
 /* TODO: 変更なかったら消す */
 .phrase-wrapper img {
   width: 100%;
 }
 
 #screen4 .phrase-wrapper img {
-  width: 300%;
+  width: 600%;
 }
 
 .phrase-wrapper .technology-image {
@@ -262,13 +266,17 @@ img {
     max-height: 300px;
   }
 
+  #screen4 .phrase-wrapper {
+    justify-content: flex-start;
+  }
+
   .phrase-wrapper img {
     padding: 0 2rem;
     width: 45%;
   }
 
   #screen4 .phrase-wrapper img {
-    width: 100%;
+    width: 200%;
   }
 
   .phrase-wrapper .technology-image {
@@ -373,6 +381,10 @@ img {
     left: -20%;
   }
 
+  #screen4 .phrase-wrapper {
+    justify-content: flex-start;
+  }
+
   #screen1 .phrase-wrapper img {
     height: 100%;
     padding: 0 8rem;
@@ -385,7 +397,7 @@ img {
   }
 
   #screen4 .phrase-wrapper img {
-    width: 100%;
+    width: 200%;
   }
 
   .phrase-wrapper .technology-image {

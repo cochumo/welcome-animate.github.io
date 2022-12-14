@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		duration: 1200,
 	})
 	.add({
-		delay: 12000,
+		delay: 14000,
 		opacity: 0,
 		duration: 1000,
 	 	complete: function(anime) {
@@ -305,5 +305,99 @@ document.addEventListener('DOMContentLoaded', () => {
 		opacity: 1,
 		left: ["30%", "0"],
 		duration: 1000,
+	})
+	.add({
+		complete: function(anime) {
+			document.querySelector('#screen3').remove();
+		}
+	})
+
+	/**
+	 * screen4
+	 */
+  // mv-3-people animation
+	anime.timeline({
+		targets: "#screen4 .mv-3-people-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 9400,
+		opacity: 1,
+		perspective: '100px',
+		translateZ: ["100px", "0px"],
+		duration: 500,
+	})
+
+	anime.timeline({
+		targets: "#screen4 .mv-3-people-image",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 9500,
+		translateX: [
+			{
+				value: xMax * -2,
+			},
+			{
+				value: xMax * 2,
+			},
+			{
+				value: xMax * -1,
+			},
+			{
+				value: xMax,
+			},
+			{
+				value: xMax / -2,
+			},
+			{
+				value: xMax / 2,
+			},
+			{
+				value: xMax / -3,
+			},
+			{
+				value: xMax / 3,
+			},
+			{
+				value: xMax / -4,
+			},
+			{
+				value: xMax / 4,
+			},
+			{
+				value: 0
+			}
+		],
+		easing: 'easeInOutSine',
+		duration: 400,
+	})
+
+	// philosphy animation
+	anime.timeline({
+		targets: "#screen4 .philosphy-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 9800,
+		opacity: 1,
+		scale: [2, 1],
+		duration: 1000,
+	})
+
+  // phrase animation
+	anime.timeline({
+		targets: "#screen4 .phrase-wrapper",
+		easing: "easeOutExpo",
+	})
+	.add({
+		delay: 9300,
+		...responsiveObject(isMobileSize, {
+      left: ["0%", "-450%"],
+    }),
+		...responsiveObject((isPcSize || isTabletSize), {
+      left: ["-50%", "-20%"],
+    }),
+		duration: 40000,
 	})
 })
